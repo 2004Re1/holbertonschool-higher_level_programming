@@ -1,3 +1,5 @@
 #!/usr/bin/python3
-for i in range(97, 123):  
-    print(chr(i))  
+# Print the ASCII alphabet in lowercase without newline
+for i in range(97, 123):
+    print(chr(i), end='')
+
