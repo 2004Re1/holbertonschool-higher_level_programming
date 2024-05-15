@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-for i in range(99):
-    if i < 10:
-        print("{}".format(0), end='')
-    print("{}, ".format(i), end='')
+# Print numbers from 0 to 99 separated by ", " with two digits and followed by a newline
+for i in range(100):
+    print("{:02d}".format(i), end=', ' if i < 99 else '\n')
+
