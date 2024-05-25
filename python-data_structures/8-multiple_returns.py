@@ -3,6 +3,6 @@
 def multiple_returns(sentence):
     # Check if the sentence is empty
     if not sentence:
-        return (0, None)  
+        return (0, None)
     else:
         return (len(sentence), sentence[0])
