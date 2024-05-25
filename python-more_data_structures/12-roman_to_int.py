@@ -1,20 +1,25 @@
 #!/usr/bin/python3
-
 def roman_to_int(roman_string):
-    sum = 0
-    a_dic = {'X': 10, 'V': 5, 'I': 1, 'C': 100, 'D': 500, 'M': 1000}
-    
-    # Iterate over each character in the roman_string
-    for i in range(len(roman_string)):
-        # Get the current character
-        current_char = roman_string[i]
-        
-        # Check if the next character is greater than the current one
-        if i < len(roman_string) - 1 and a_dic[roman_string[i + 1]] > a_dic[current_char]:
-            # If it is, subtract the value of the current character
-            sum -= a_dic[current_char]
+    if not isinstance(roman_string, str) or roman_string is None:
+        return 0
+    roman_numerals = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+        }
+    total = 0
+    prev_value = 0
+
+    for char in reversed(roman_string):
+        value = roman_numerals.get(char, 0)
+        if value < prev_value:
+            total -= value
         else:
-            # Otherwise, add the value of the current character
-            sum += a_dic[current_char]
-    
-    return sum
+            total += value
+        prev_value = value
+
+    return total
