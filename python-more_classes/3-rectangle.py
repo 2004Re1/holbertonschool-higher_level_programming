@@ -6,7 +6,7 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """Initialize the Rectangle with given width and height.
-        
+
         Args:
             width (int): The width of the rectangle.
             height (int): The height of the rectangle.
@@ -17,7 +17,7 @@ class Rectangle:
     @property
     def width(self):
         """Get the width of the rectangle.
-        
+
         Returns:
             int: The width of the rectangle.
         """
@@ -26,10 +26,10 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """Set the width of the rectangle.
-        
+
         Args:
             value (int): The new width of the rectangle.
-        
+
         Raises:
             TypeError: If width is not an integer.
             ValueError: If width is less than 0.
@@ -43,7 +43,7 @@ class Rectangle:
     @property
     def height(self):
         """Get the height of the rectangle.
-        
+
         Returns:
             int: The height of the rectangle.
         """
@@ -52,10 +52,10 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """Set the height of the rectangle.
-        
+
         Args:
             value (int): The new height of the rectangle.
-        
+
         Raises:
             TypeError: If height is not an integer.
             ValueError: If height is less than 0.
@@ -68,7 +68,7 @@ class Rectangle:
 
     def area(self):
         """Calculate the area of the rectangle.
-        
+
         Returns:
             int: The area of the rectangle.
         """
@@ -76,7 +76,7 @@ class Rectangle:
 
     def perimeter(self):
         """Calculate the perimeter of the rectangle.
-        
+
         Returns:
             int: The perimeter of the rectangle.
         """
@@ -86,7 +86,7 @@ class Rectangle:
 
     def __str__(self):
         """Provide a string representation of the rectangle.
-        
+
         Returns:
             str: A string of `#` characters representing the rectangle.
         """
