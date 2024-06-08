@@ -1,18 +1,27 @@
 #!/usr/bin/python3
-"""JSON serialization of an object"""
+"""JSON serialization of a Student object"""
 
 class Student:
     def __init__(self, first_name, last_name, age):
+        """Initializes the Student instance"""
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
-    def class_to_json(self):
-        """Returns the dictionary description for JSON serialization of an object"""
-        j_dict = {}
+    def to_json(self, attrs=None):
+        """Retrieves a dictionary representation of a Student instance.
 
-        for attr, value in self.__dict__.items():
-            if isinstance(value, (list, dict, str, int, bool)):
-                j_dict[attr] = value
-
-        return j_dict
+        If attrs is a list of strings, only attribute names contained in this list must be retrieved.
+        Otherwise, all attributes must be retrieved.
+        """
+        if attrs is None:
+            return self.__dict__
+        
+        if not isinstance(attrs, list):
+            return self.__dict__
+        
+        for item in attrs:
+            if not isinstance(item, str):
+                return self.__dict__
+        
+        return {key: value for key, value in self.__dict__.items() if key in attrs
