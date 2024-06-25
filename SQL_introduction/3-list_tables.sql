@@ -1,0 +1,2 @@
+-- lol
+SHOW tables;
