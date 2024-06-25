@@ -1,5 +1,5 @@
 -- CReating database
-CREATE table first_table(
+CREATE table IF NOT EXISTS first_table(
 	id INT,
 	name VARCHAR(256),
 );
