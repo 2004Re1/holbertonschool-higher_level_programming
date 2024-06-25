@@ -1,2 +1,2 @@
 --ROWS LASMIOFAJFPOIA
-SHOW rows FROM 'first_table';
+SELECT * FROM 'first_table';
