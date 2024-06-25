@@ -1,3 +1,3 @@
 -- DOINGG
 SELECT `score`, `name` FROM `first_table`
-ORDER BY `score` DEC LIMIT(10);
+ORDER BY `score` DESC LIMIT(10);
