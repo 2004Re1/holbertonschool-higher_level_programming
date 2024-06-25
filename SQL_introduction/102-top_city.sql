@@ -1,5 +1,6 @@
 -- ASKNJDAKF
 SELECT city, AVG(value) AS avg_temp FROM temperatures
 GROUP BY city
-WHERE month = 'July' OR month = 'August'
-ORDER BY AVG(value);
+WHERE month IN (7,8)
+ORDER BY AVG(value)
+LIMIT 3;
