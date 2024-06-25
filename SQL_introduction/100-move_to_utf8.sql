@@ -1,13 +1,12 @@
--- Step 1: Backup your database (optional but highly recommended)
--- mysqldump -u username -p hbtn_0c_0 > hbtn_0c_0_backup.sql
 -- Select the database hbtn_0c_0
 USE hbtn_0c_0;
 
--- Step 2: Alter database character set and collation
+-- Convert the database to UTF8 (utf8mb4, collate utf8mb4_unicode_ci)
 ALTER DATABASE hbtn_0c_0 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
--- Step 3: Alter table character set and collation
+-- Convert the table first_table to UTF8 (utf8mb4, collate utf8mb4_unicode_ci)
 ALTER TABLE first_table CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
--- Step 4: Alter specific column character set and collation
-ALTER TABLE first_table MODIFY name VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+-- Convert the field name in first_table to UTF8 (utf8mb4, collate utf8mb4_unicode_ci)
+ALTER TABLE first_table MODIFY name VARCHAR(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
