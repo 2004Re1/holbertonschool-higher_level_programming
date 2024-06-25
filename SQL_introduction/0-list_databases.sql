@@ -1,1 +1,2 @@
-mysql -u your_username -p
+-- Shows all databases
+SHOW DATABASES;
