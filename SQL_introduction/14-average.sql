@@ -1,2 +1,2 @@
 -- KJSOIAFJA
-SELECT AVG(score) FROM second_table LIMIT(10); 
+SELECT AVG(score) AS average FROM second_table; 
