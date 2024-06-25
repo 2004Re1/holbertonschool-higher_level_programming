@@ -1,3 +1,3 @@
 -- I love anime
-SELECT COUNT(id), score FROM second_table
+SELECT score, COUNT(id) AS number FROM second_table
 GROUP BY score;
