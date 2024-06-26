@@ -1,7 +1,5 @@
 -- Query to list all cities of California without using JOIN
-
--- Select cities of California using a subquery
-SELECT *
+SELECT id, name
 FROM cities
 WHERE state_id = (
     SELECT id
