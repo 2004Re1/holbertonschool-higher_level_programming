@@ -1,0 +1,11 @@
+--CREATING DATABASE
+CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
+--USING IT
+USE hbtn_0d_usa
+--creating table
+CREATE TABLE IF NOT EXISTS parent (
+  id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  state_id INT NOT NULL,
+  name VARCHAR(255) NOT NULL,
+  FOREIGN KEY (state_id) REFERENCE state(id)
+);
