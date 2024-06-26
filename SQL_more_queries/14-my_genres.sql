@@ -1,0 +1,6 @@
+-- aisjdoiafjaf
+SELECT tv_genres.name FROM tv_shows
+INNER JOIN tv_shows_genres ON tv_show_genres.show_id = tv_shows.id
+INNER JOIN tv_shows_genres ON tv_show_genres.genre_id = tv_genres.id
+WHERE tv_shows.name = 'Dexter'
+ORDER BY tv_genres.name ASC;
