@@ -1,8 +1,10 @@
--- Assuming the database name is passed as an argument, for example 'hbtn_0d_usa'
+-- Query to list all cities with their corresponding state names
 
-USE hbtn_0d_usa;
-
-SELECT cities.id, cities.name, states.name AS state_name
-FROM cities
-INNER JOIN states ON states.id = cities.state_id
-ORDER BY cities.id ASC;
+SELECT
+    cities.id,
+    cities.name,
+    (SELECT name FROM states WHERE id = cities.state_id) AS state_name
+FROM
+    cities
+ORDER BY
+    cities.id ASC;
